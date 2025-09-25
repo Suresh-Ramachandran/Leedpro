@@ -1,0 +1,19 @@
+class Solution {
+    public char findTheDifference(String s, String t) {
+        int n=0;
+      //  int m=0;
+        if(s.length()>0)
+        {
+        for(int i=0;i<s.length();i++)
+        {
+            n=n+s.charAt(i);
+        }
+        for(int i=0;i<t.length();i++)
+        {
+            n=n-t.charAt(i);
+        }
+        return (char) (-n);
+        }
+        else return t.charAt(0);
+    }
+}
