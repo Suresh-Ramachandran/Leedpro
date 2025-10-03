@@ -1,0 +1,14 @@
+class Solution {
+    public int minimumChairs(String s) {
+        int max=0;
+        int count =0;
+        for(char i :s.toCharArray())
+        {
+            if(i=='E') count++;
+            else count--;
+            max = (max<count)?count:max;
+        }
+
+        return max;
+    }
+}
